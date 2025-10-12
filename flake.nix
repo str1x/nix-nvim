@@ -19,7 +19,7 @@
 # If there is still not adequate info, ask in discussions
 # on the nixCats repo (or open a PR to add the info to the help!)
 {
-  description = "A Lua-natic's neovim flake, with extra cats! nixCats!";
+  description = "nvim config for nix";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";

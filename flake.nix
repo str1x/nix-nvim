@@ -112,6 +112,7 @@
           typescript-language-server
           vue-language-server
           vtsls
+          vscode-langservers-extracted
         ];
         # these names are arbitrary.
         lint = with pkgs; [

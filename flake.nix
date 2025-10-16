@@ -107,8 +107,8 @@
         # some categories of stuff.
         general = with pkgs; [
           universal-ctags
-          ripgrep
           fd
+          ripgrep
           typescript-language-server
           vue-language-server
           vtsls
@@ -228,6 +228,7 @@
             telescope-fzf-native-nvim
             telescope-ui-select-nvim
             telescope-nvim
+            telescope-file-browser-nvim
           ];
           always = with pkgs.vimPlugins; [
             nvim-lspconfig

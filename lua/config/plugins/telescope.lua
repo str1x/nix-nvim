@@ -97,6 +97,7 @@ return {
         vim.cmd.packadd(name)
         vim.cmd.packadd("telescope-fzf-native.nvim")
         vim.cmd.packadd("telescope-ui-select.nvim")
+        vim.cmd.packadd("telescope-file-browser.nvim")
     end,
     after = function (plugin)
       require('telescope').setup {
@@ -119,6 +120,7 @@ return {
       -- Enable telescope extensions, if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'file_browser')
 
       vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
     end,

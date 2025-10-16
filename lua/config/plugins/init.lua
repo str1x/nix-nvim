@@ -64,6 +64,7 @@ if nixCats('general.extra') then
 end
 
 require('lze').load {
+  {"plenary.nvim"},
   { import = "config.plugins.telescope", },
   { import = "config.plugins.treesitter", },
   { import = "config.plugins.completion", },

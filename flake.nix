@@ -109,6 +109,9 @@
           universal-ctags
           ripgrep
           fd
+          typescript-language-server
+          vue-language-server
+          vtsls
         ];
         # these names are arbitrary.
         lint = with pkgs; [
@@ -385,6 +388,9 @@
             nixpkgs = ''import ${pkgs.path} {}'';
             # or inherit nixpkgs;
           };
+          vueTypescriptPlugin = {
+            location = "${nixpkgs.lib.getBin pkgs.vue-language-server}/lib/language-tools/packages/language-server";
+          };
         };
       };
       regularCats = { pkgs, ... }@misc: {
@@ -443,6 +449,9 @@
               (utils.mkLuaInline ''[[I am a]] .. [[ lua ]] .. type("value")'')
             ];
             thing4 = "couch is for scratching";
+          };
+          vueTypescriptPlugin = {
+            location = "${nixpkgs.lib.getBin pkgs.vue-language-server}/lib/language-tools/packages/language-server";
           };
         };
       };

@@ -29,11 +29,11 @@ vim.wo.number = true
 vim.o.mouse = 'a'
 
 -- Indent
-vim.o.smarttab = true
-vim.opt.cpoptions:append('I')
-vim.o.expandtab = true
-vim.o.smartindent = true
-vim.o.autoindent = true
+-- vim.o.smarttab = true
+-- vim.opt.cpoptions:append('I')
+-- vim.o.expandtab = true
+-- vim.o.smartindent = true
+-- vim.o.autoindent = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
@@ -95,8 +95,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = 'Scroll Up' })
 vim.keymap.set("n", "n", "nzzzv", { desc = 'Next Search Result' })
 vim.keymap.set("n", "N", "Nzzzv", { desc = 'Previous Search Result' })
 
-vim.keymap.set("n", "<leader><leader>[", "<cmd>bprev<CR>", { desc = 'Previous buffer' })
-vim.keymap.set("n", "<leader><leader>]", "<cmd>bnext<CR>", { desc = 'Next buffer' })
+vim.keymap.set("n", "<S-Tab>", "<cmd>bprev<CR>", { desc = 'Previous buffer' })
+vim.keymap.set("n", "<Tab>", "<cmd>bnext<CR>", { desc = 'Next buffer' })
 vim.keymap.set("n", "<leader><leader>l", "<cmd>b#<CR>", { desc = 'Last buffer' })
 vim.keymap.set("n", "<leader><leader>d", "<cmd>bdelete<CR>", { desc = 'delete buffer' })
 

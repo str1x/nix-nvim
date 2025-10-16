@@ -168,6 +168,7 @@
               "catppuccin-mocha" = catppuccin-nvim;
               "tokyonight" = tokyonight-nvim;
               "tokyonight-day" = tokyonight-nvim;
+              "everforest" = everforest;
             }
           );
           # This is obviously a fairly basic usecase for this, but still nice.
@@ -378,7 +379,7 @@
           # you could also pass something else:
           # see :help nixCats
           themer = true;
-          colorscheme = "onedark";
+          colorscheme = "everforest";
         };
         extra = {
           # to keep the categories table from being filled with non category things that you want to pass

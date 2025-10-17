@@ -1,0 +1,6 @@
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('nixd')
+vim.lsp.enable('vue_ls')
+vim.lsp.enable('vtsls')
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('eslint')

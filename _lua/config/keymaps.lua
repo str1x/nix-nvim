@@ -1,5 +1,5 @@
 local map = vim.keymap.set
--- local utils = require "utils"
+local utils = require('config.utils')
 local telescope = require "telescope.builtin"
 -- local conform = require "conform"
 -- local tabufine = require "nvchad.tabufline"
@@ -58,12 +58,12 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 -- map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })
 -- map("n", "<leader>wk", function() vim.cmd("WhichKey " .. vim.fn.input "WhichKey: ") end, { desc = "whichkey query lookup" })
 -- scroll
--- map("n", "<C-d>", function()
---   utils.scroll(20, 150)
--- end, { desc = "scroll up" })
--- map("n", "<C-u>", function()
---   utils.scroll(-20, 150)
--- end, { desc = "scroll down" })
+map("n", "<C-d>", function()
+  utils.scroll(20, 150)
+end, { desc = "scroll up" })
+map("n", "<C-u>", function()
+  utils.scroll(-20, 150)
+end, { desc = "scroll down" })
 -- dap
 -- map("n", "<leader>rd", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
 -- map("n", "<leader>rD", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })

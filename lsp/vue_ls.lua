@@ -48,4 +48,9 @@ return {
 
     client.handlers['tsserver/request'] = typescriptHandler
   end,
+  settings = {
+    emmet = {
+      showExpandedAbbreviation = "never",
+    },
+  },
 }

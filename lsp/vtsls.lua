@@ -44,7 +44,7 @@ return {
     },
     typescript = {
       preferences = {
-        importModuleSpecifier = "non-relative",
+        importModuleSpecifier = "project-relative",
         updateImportsOnFileMove = {
           enabled = "always",
         },

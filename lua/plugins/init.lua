@@ -370,5 +370,5 @@ require('lze').load {
         },
       })
     end,
-  }
+  },
 }

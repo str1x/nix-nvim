@@ -35,7 +35,25 @@ vim.lsp.config('*', {
   capabilities = capabilities,
 });
 
+
+require('lze').load({
+  {
+    -- lazydev makes your lsp way better in your config without needing extra lsp configuration.
+    "lazydev.nvim",
+    for_cat = "neonixdev",
+    cmd = { "LazyDev" },
+    ft = "lua",
+    after = function(_)
+      require('lazydev').setup({
+        library = {
+          { words = { "nixCats" }, path = (nixCats.nixCatsPath or "") .. '/lua' },
+        },
+      })
+    end,
+  },
+});
 vim.lsp.enable('lua_ls')
+
 vim.lsp.enable('nixd')
 vim.lsp.enable('vue_ls')
 vim.lsp.enable('vtsls')

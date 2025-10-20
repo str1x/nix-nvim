@@ -2,15 +2,15 @@
 return {
   init_options = {
     hostInfo = 'neovim',
-    plugins = {
-      {
-        name = "@vue/typescript-plugin",
-        location = nixCats.extra("vueTypescriptPlugin.location"),
-        languages = { "vue" },
-        configNamespace = "typescript",
-        enableForWorkspaceTypeScriptVersions = true,
-      },
-    },
+    -- plugins = {
+    --   {
+    --     name = "@vue/typescript-plugin",
+    --     location = nixCats.extra("vueTypescriptPlugin.location"),
+    --     languages = { "vue" },
+    --     configNamespace = "typescript",
+    --     enableForWorkspaceTypeScriptVersions = true,
+    --   },
+    -- },
   },
   cmd = { 'typescript-language-server', '--stdio' },
   filetypes = {

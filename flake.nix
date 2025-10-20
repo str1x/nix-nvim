@@ -151,7 +151,7 @@
             lzextras
             vim-repeat
             plenary-nvim
-            nvim-lspconfig
+            # nvim-lspconfig
             (nvim-notify.overrideAttrs { doCheck = false; }) # TODO: remove overrideAttrs after check is fixed
             neoscroll-nvim
             noice-nvim

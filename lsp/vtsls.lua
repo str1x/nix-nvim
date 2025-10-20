@@ -42,16 +42,16 @@ return {
         },
       },
     },
-    typescript = {
-      preferences = {
-        importModuleSpecifier = "project-relative",
-        updateImportsOnFileMove = {
-          enabled = "always",
-        },
-        suggest = {
-          completeFunctionCalls = true,
-        },
-      },
-    },
+    -- typescript = {
+    --   preferences = {
+    --     importModuleSpecifier = "project-relative",
+    --     updateImportsOnFileMove = {
+    --       enabled = "always",
+    --     },
+    --     suggest = {
+    --       completeFunctionCalls = true,
+    --     },
+    --   },
+    -- },
   },
 }

@@ -1,4 +1,4 @@
-local util = require 'lspconfig.util'
+local util = require('utils.lspconf')
 local lsp = vim.lsp
 
 local eslint_config_files = {

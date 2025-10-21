@@ -108,6 +108,7 @@
         general = with pkgs; [
           universal-ctags
           fd
+          jq
           ripgrep
           typescript-language-server
           vue-language-server

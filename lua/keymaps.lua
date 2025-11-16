@@ -55,21 +55,15 @@ map("n", "<C-s>", "<cmd>w<CR>", { desc = "general save file" })
 map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "general copy whole file" })
 map("i", "jk", "<ESC>", { nowait = true })
 map("n", ";", ":", { desc = "CMD enter command mode" })
+-- togglers
+map("n", "<leader>tN", "<cmd>set nu!<CR>", { desc = "[t]oggle line [N]umber" })
+map("n", "<leader>tn", "<cmd>set rnu!<CR>", { desc = "[t]toggle relative [n]umber" })
 -- map("n", "<leader>zm", utils.toggleZenMode, { desc = "Toggle zen mode" })
--- map({'i', 'n', 'c'}, '<C-BS>', function()
---   require('keymap-switch').switch()
--- end, { desc = "Toggle keyboard layout"})
--- relative numbers
--- map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "toggle line number" })
--- map("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "toggle relative number" })
 -- format
 -- map("n", "<leader>fm", function() conform.format({ lsp_fallback = true }) end, { desc = "general format file" })
 -- dap
 -- map("n", "<leader>rd", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
 -- map("n", "<leader>rD", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
--- git
--- map("n", "<leader>gb", "<cmd>Gitsigns blame_line <CR>", { desc = "git blame line" })
--- map("n", "<leader>gB", "<cmd>Gitsigns blame <CR>", { desc = "git blame" })
 -- lsp go to
 -- map("n", "gD", vim.lsp.buf.declaration, { desc = "LSP Go to declaration" })
 -- code actions

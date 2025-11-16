@@ -1,3 +1,5 @@
+local keymapSwitch = require('plugins.keymap-switch')
+
 return {
   {
     "lualine.nvim",
@@ -11,12 +13,15 @@ return {
 
       require('lualine').setup({
         options = {
+          refresh = {
+            statusline = 40,
+          },
           icons_enabled = false,
-          -- theme = colorschemeName,
-          component_separators = '|',
+          component_separators = '',
           section_separators = '',
         },
         sections = {
+          lualine_a = { 'mode', keymapSwitch.kemapStatus },
           lualine_c = {
             {
               'filename', path = 1, status = true,

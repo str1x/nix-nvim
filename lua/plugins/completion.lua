@@ -47,7 +47,7 @@ return {
         -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
         -- See :h blink-cmp-config-keymap for configuring keymaps
         keymap =  {
-          preset = 'enter',
+          preset = 'super-tab',
         },
         cmdline = {
           enabled = true,
@@ -100,7 +100,7 @@ return {
           },
           list = {
             selection = {
-              preselect = true
+              preselect = false
             }
           }
         },

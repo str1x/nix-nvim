@@ -179,6 +179,14 @@ return {
     desc = "[l]ist [f]ile browser"
   },
   {
+    "-",
+    function()
+      return require('telescope').extensions.file_browser.file_browser({ initial_mode = 'normal' })
+    end,
+    mode = {"n"},
+    desc = "file browser"
+  },
+  {
     "<leader>lS",
     function()
       return require('telescope.builtin').lsp_workspace_symbols({ initial_mode = 'normal' })

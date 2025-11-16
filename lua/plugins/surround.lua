@@ -1,11 +1,11 @@
 return {
   {
     "nvim-surround",
-    for_cat = 'general.always',
+    versions = "*",
     event = "DeferredUIEnter",
     -- keys = "",
     after = function()
-      require('nvim-surround').setup()
+      require('nvim-surround').setup({})
     end,
-  },
+  }
 }

@@ -12,12 +12,11 @@ require('lze').load {
   { import = 'plugins.undotree' },
   { import = 'plugins.comment' },
   { import = 'plugins.indent-blankline' },
-  { import = 'plugins.surround' },
   { import = 'plugins.fidget' },
   { import = 'plugins.lualine' },
   { import = 'plugins.gitsigns' },
   { import = 'plugins.whichkey' },
   { import = 'plugins.neoscroll' },
   { import = 'plugins.noice' },
+  { import = 'plugins.surround' },
 }
-

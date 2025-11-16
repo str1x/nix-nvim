@@ -36,7 +36,7 @@ o.pumblend = 15
 o.signcolumn = "yes"
 o.splitbelow = true
 o.splitright = true
-o.timeoutlen = 150
+o.timeoutlen = 500
 o.undofile = true
 
 -- interval for writing swap file to disk, also used by gitsigns

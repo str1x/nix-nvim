@@ -53,7 +53,6 @@ vim.wo.relativenumber = true
 
 -- Decrease update time
 vim.o.updatetime = 250
-vim.o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menu,preview,noselect'

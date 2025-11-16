@@ -21,6 +21,9 @@ return {
         { "<leader>t", group = "[t]oggles" },
         { "<leader>w", group = "[w]orkspace" },
         { "<leader>l", group = "[l]ist" },
+        { "ys", group = "surrounding add" },
+        { "ds", group = "surrounding delete" },
+        { "cs", group = "surrounding change" },
       }
     end,
   },

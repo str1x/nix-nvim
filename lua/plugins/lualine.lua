@@ -10,7 +10,6 @@ return {
     -- keys = "",
     -- colorscheme = "",
     after = function ()
-
       require('lualine').setup({
         options = {
           refresh = {

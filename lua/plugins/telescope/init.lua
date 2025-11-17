@@ -34,6 +34,11 @@ return {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
+          file_browser = {
+            path = '%:p:h',
+            grouped = true,
+            select_buffer = true,
+          },
         },
       }
 

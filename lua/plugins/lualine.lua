@@ -1,5 +1,13 @@
 local keymapSwitch = require('plugins.keymap-switch')
 
+function isRecording()
+  local reg = vim.fn.reg_recording()
+  if reg == '' then
+    return ''
+  end
+  return "%#lualine_a_visual# @: " .. reg .. " "
+end
+
 return {
   {
     "lualine.nvim",
@@ -20,7 +28,7 @@ return {
           section_separators = '',
         },
         sections = {
-          lualine_a = { 'mode', keymapSwitch.kemapStatus },
+          lualine_a = { 'mode', keymapSwitch.kemapStatus, isRecording },
           lualine_c = {
             {
               'filename', path = 1, status = true,

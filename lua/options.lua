@@ -3,18 +3,21 @@ local o = vim.o
 local g = vim.g
 
 o.laststatus = 3
-o.showmode = false
+o.showmode = true
 
 o.clipboard = "unnamedplus"
 o.cursorline = true
-o.cursorlineopt = "number"
+o.cursorlineopt = "number,line"
 
--- Indenting
+-- Indent
+o.smarttab = true
+opt.cpoptions:append('I')
 o.expandtab = true
-o.shiftwidth = 2
 o.smartindent = true
+o.autoindent = true
 o.tabstop = 2
 o.softtabstop = 2
+o.shiftwidth = 2
 
 opt.fillchars = { eob = " " }
 o.ignorecase = true
@@ -56,22 +59,61 @@ g.loaded_ruby_provider = 0
 opt.spell = false
 opt.spelllang = { "en_us", 'ru_ru' }
 
--- add binaries installed by mason.nvim to path
-local is_windows = vim.fn.has "win32" ~= 0
-local sep = is_windows and "\\" or "/"
-local delim = is_windows and ";" or ":"
--- vim.env.PATH = table.concat({ vim.fn.stdpath "data", "mason", "bin" }, sep) .. delim .. vim.env.PATH
-
-vim.o.cursorlineopt = "number,line"
-
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.lsp.foldexpr()"
 opt.foldenable = false
 opt.relativenumber = true
-opt.termguicolors = true -- True color support
-opt.autoindent = true    --- Good auto indent
+-- opt.termguicolors = true -- True color support
+o.termguicolors = true
+-- opt.autoindent = true    --- Good auto indent
 opt.colorcolumn = { 120 }
 
-vim.o.termguicolors = true
--- vim.o.background = "dark"
+-- NOTE: These 2 need to be set up before any plugins are loaded.
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- Sets how neovim will display certain whitespace characters in the editor.
+--  See `:help 'list'`
+--  and `:help 'listchars'`
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+-- Set highlight on search
+vim.opt.hlsearch = true
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = 'split'
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10
+
+-- stops line wrapping from being confusing
+vim.o.breakindent = true
+
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menu,preview,noselect'
+
+-- [[ Disable auto comment on enter ]]
+-- See :help formatoptions
+vim.api.nvim_create_autocmd("FileType", {
+  desc = "remove formatoptions",
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
+-- WTF?
+vim.g.netrw_liststyle=0
+vim.g.netrw_banner=0
 

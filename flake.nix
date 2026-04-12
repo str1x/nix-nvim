@@ -114,6 +114,7 @@
           vue-language-server
           vtsls
           vscode-langservers-extracted
+          sqls
         ];
         # these names are arbitrary.
         lint = with pkgs; [

@@ -19,4 +19,5 @@ require('lze').load {
   { import = 'plugins.neoscroll' },
   { import = 'plugins.noice' },
   { import = 'plugins.surround' },
+  { import = 'plugins.yazi' },
 }

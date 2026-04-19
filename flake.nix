@@ -244,6 +244,7 @@
             vim-fugitive
             vim-rhubarb
             nvim-surround
+            yazi-nvim
           ];
           extra = with pkgs.vimPlugins; [
             fidget-nvim

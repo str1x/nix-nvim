@@ -2,7 +2,7 @@
 -- See `:help nvim-treesitter`
 return {
   {
-    "nvim-treesitter",
+    "nvim-treesitter-legacy",
     for_cat = 'general.treesitter',
     -- cmd = { "" },
     event = "DeferredUIEnter",
@@ -11,7 +11,7 @@ return {
     -- colorscheme = "",
     load = function (name)
         vim.cmd.packadd(name)
-        vim.cmd.packadd("nvim-treesitter-textobjects")
+        vim.cmd.packadd("nvim-treesitter-textobjects-legacy")
     end,
     after = function (plugin)
       -- [[ Configure Treesitter ]]

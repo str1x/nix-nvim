@@ -22,7 +22,7 @@
   description = "nvim config for nix";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     # see :help nixCats.flake.inputs
@@ -220,13 +220,19 @@
             colorful-menu-nvim
           ];
           treesitter = with pkgs.vimPlugins; [
-            nvim-treesitter-textobjects
-            nvim-treesitter.withAllGrammars
+            nvim-treesitter-textobjects-legacy
+            nvim-treesitter-legacy.withAllGrammars
             # This is for if you only want some of the grammars
             # (nvim-treesitter.withPlugins (
             #   plugins: with plugins; [
             #     nix
             #     lua
+            #     typescript
+            #     javascript
+            #     css
+            #     yaml
+            #     json
+            #     vue
             #   ]
             # ))
           ];

@@ -5,7 +5,6 @@ return {
     priority = 1000,
     event = "DeferredUIEnter",
     after = function()
-      vim.print('TEST')
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.everforest_enable_italic = true
@@ -18,5 +17,5 @@ return {
       vim.g.everforest_diagnostic_line_highlight = 1
       vim.cmd.colorscheme('everforest')
     end
-  },
+  }
 }

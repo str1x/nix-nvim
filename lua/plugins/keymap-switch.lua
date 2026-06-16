@@ -44,7 +44,6 @@ end
 function M.provider() return config.format(M.condition() and vim.b.keymap_name or 'en') end
 
 function M.setup(opts)
-  vim.notify('test')
   vim.validate({
     keymap = { opts.keymap, 'string' },
     format = {

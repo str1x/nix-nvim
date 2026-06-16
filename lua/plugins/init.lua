@@ -3,7 +3,6 @@ vim.cmd.colorscheme(colorschemeName)
 
 require('plugins.keymap-switch').setup({ keymap = "russian-jcukenwin" })
 
-
 require('lze').load {
   {"plenary.nvim"},
   { import = 'plugins.telescope' },

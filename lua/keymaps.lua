@@ -56,15 +56,14 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 -- togglers
 map("n", "<leader>tN", "<cmd>set nu!<CR>", { desc = "[t]oggle line [N]umber" })
 map("n", "<leader>tn", "<cmd>set rnu!<CR>", { desc = "[t]toggle relative [n]umber" })
--- TODO: fixme
--- map("n", "<leader>tb", function()
---   local dark, light = 'dark', 'light'
---   if (vim.o.background == dark) then
---     vim.o.background = light
---   else
---     vim.o.background = dark
---   end
--- end, { desc = "[t]oggle [b]ackground" })
+map("n", "<leader>tb", function()
+  local dark, light = 'dark', 'light'
+  if (vim.o.background == dark) then
+    vim.o.background = light
+  else
+    vim.o.background = dark
+  end
+end, { desc = "[t]oggle [b]ackground" })
 -- lsp go to
 map("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "LSP [g]o to [d]eclaration" })
 -- code actions

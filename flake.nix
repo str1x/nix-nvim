@@ -149,6 +149,7 @@
           # you can make subcategories!!!
           # (always isnt a special name, just the one I chose for this subcategory)
           always = [
+            everforest
             lze
             lzextras
             vim-repeat
@@ -167,17 +168,17 @@
         # You can retreive information from the
         # packageDefinitions of the package this was packaged with.
         # :help nixCats.flake.outputs.categoryDefinitions.scheme
-        themer = with pkgs.vimPlugins;
-          (builtins.getAttr (categories.colorscheme or "onedark") {
-              # Theme switcher without creating a new category
-              "onedark" = onedark-nvim;
-              "catppuccin" = catppuccin-nvim;
-              "catppuccin-mocha" = catppuccin-nvim;
-              "tokyonight" = tokyonight-nvim;
-              "tokyonight-day" = tokyonight-nvim;
-              "everforest" = everforest;
-            }
-          );
+        # themer = with pkgs.vimPlugins;
+        #   (builtins.getAttr (categories.colorscheme or "onedark") {
+        #       # Theme switcher without creating a new category
+        #       "onedark" = onedark-nvim;
+        #       "catppuccin" = catppuccin-nvim;
+        #       "catppuccin-mocha" = catppuccin-nvim;
+        #       "tokyonight" = tokyonight-nvim;
+        #       "tokyonight-day" = tokyonight-nvim;
+        #       "everforest" = everforest;
+        #     }
+        #   );
           # This is obviously a fairly basic usecase for this, but still nice.
       };
 
@@ -393,8 +394,8 @@
           lspDebugMode = false;
           # you could also pass something else:
           # see :help nixCats
-          themer = true;
-          colorscheme = "everforest";
+          # themer = true;
+          # colorscheme = "everforest-soft-light";
         };
         extra = {
           # to keep the categories table from being filled with non category things that you want to pass

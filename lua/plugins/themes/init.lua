@@ -3,7 +3,6 @@ return {
     'everforest',
     lazy = false,
     priority = 1000,
-    event = "DeferredUIEnter",
     after = function()
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.

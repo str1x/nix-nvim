@@ -1,16 +1,6 @@
 return {
   {
     "noice.nvim",
-    dependencies = {
-      "nui.nvim",
-      {
-        "nvim-notify",
-        opts = {
-          stages = "static",
-          render = "compact",
-        },
-      },
-    },
     after = function ()
       require('noice').setup({
         ["vim.lsp.util.convert_input_to_markdown_lines"] = true,

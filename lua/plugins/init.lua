@@ -1,6 +1,3 @@
-local colorschemeName = nixCats('colorscheme')
-vim.cmd.colorscheme(colorschemeName)
-
 require('plugins.keymap-switch').setup({ keymap = "russian-jcukenwin" })
 
 require('lze').load {

@@ -115,6 +115,7 @@
           vtsls
           vscode-langservers-extracted
           sqls
+          tailwindcss-language-server
         ];
         # these names are arbitrary.
         lint = with pkgs; [

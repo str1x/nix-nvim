@@ -3,9 +3,6 @@ return {
   "yazi.nvim",
   version = "*", -- use the latest stable version
   event = "DeferredUIEnter",
-  dependencies = {
-    { "nvim-lua/plenary.nvim", lazy = true },
-  },
   keys = {
     -- 👇 in this section, choose your own keymappings!
     {

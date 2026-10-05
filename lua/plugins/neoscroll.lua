@@ -19,7 +19,7 @@ return {
         desc = "scroll up"
       },
     },
-    config = function()
+    after = function()
       require("neoscroll").setup {
         easing_function = "quadratic",
       }

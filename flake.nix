@@ -160,6 +160,7 @@
             neoscroll-nvim
             noice-nvim
             nui-nvim
+            codecompanion-nvim
           ];
           extra = [
             oil-nvim

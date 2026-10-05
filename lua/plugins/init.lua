@@ -1,7 +1,12 @@
 require('plugins.keymap-switch').setup({ keymap = "russian-jcukenwin" })
 
 require('lze').load {
-  {"plenary.nvim"},
+  {
+    "plenary.nvim",
+    on_require = {
+      "plenary"
+    },
+  },
   { import = 'plugins.telescope' },
   { import = 'plugins.treesitter' },
   { import = 'plugins.completion' },
@@ -18,4 +23,5 @@ require('lze').load {
   { import = 'plugins.surround' },
   { import = 'plugins.yazi' },
   { import = 'plugins.themes' },
+  { import = 'plugins.codecompanion' },
 }

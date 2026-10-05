@@ -8,7 +8,7 @@ return {
             return require("codecompanion.adapters").extend("ollama", {
               schema = {
                 model = {
-                  default = "qwen2.5-coder:14b",
+                  default = "mrasif/gpt-oss-20b-GGUF:Q4_K_M",
                 },
                 num_ctx = {
                   default = 16384,
@@ -22,20 +22,20 @@ return {
         chat = {
           adapter = {
             name = "ollama",
-            model = "qwen2.5-coder:14b",
+            model = "mrasif/gpt-oss-20b-GGUF:Q4_K_M",
             num_ctx = 16384,
           },
         },
         inline = {
           adapter = {
             name = "ollama",
-            model = "qwen2.5-coder:14b",
+            model = "mrasif/gpt-oss-20b-GGUF:Q4_K_M",
           },
         },
         cmd = {
           adapter = {
             name = "ollama",
-            model = "qwen2.5-coder:14b",
+            model = "mrasif/gpt-oss-20b-GGUF:Q4_K_M",
           },
         },
       },

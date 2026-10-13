@@ -107,7 +107,11 @@ return {
         'ngClass',
       },
       classFunctions = {
+        'h',
+        'tw',
         'tv',
+        'cn',
+        'twMerge',
       },
       includeLanguages = {
         eelixir = 'html-eex',
@@ -116,6 +120,10 @@ return {
         heex = 'phoenix-heex',
         htmlangular = 'html',
         templ = 'html',
+        typescript = 'javascript',
+        typescriptreact = 'javascriptreact',
+        javascript = 'javascript',
+        javascriptreact = 'javascriptreact',
       },
     },
   },

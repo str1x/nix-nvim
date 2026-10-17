@@ -24,5 +24,5 @@ require('lze').load {
   { import = 'plugins.yazi' },
   { import = 'plugins.themes' },
   { import = 'plugins.codecompanion' },
-  -- { import = 'plugins.rustaceanvim' },
+  { import = 'plugins.rustaceanvim' },
 }

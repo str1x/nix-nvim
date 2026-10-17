@@ -1,3 +1,6 @@
+--- ВАЖНО! имя конфига должно быть `rust_analyzer`, иначе сломается часть функционала
+--- TODO: вынести это имя в константу
+
 ---@brief
 ---
 --- https://github.com/rust-lang/rust-analyzer
@@ -48,11 +51,24 @@ local function executable_exists(command)
 end
 
 local function user_sysroot_src()
-  return vim.tbl_get(vim.lsp.config['rust_analyzer'], 'settings', 'rust-analyzer', 'cargo', 'sysrootSrc')
+  -- какойто мудак сломал этот код для neovim > 11 версии, vim.lsp.config будет пустой пока не будет вызван vim.lsp.config('rust_analyzer') явно
+  local config = vim.lsp.config['rust_analyzer']
+  if config then
+    return vim.tbl_get(vim.lsp.config['rust_analyzer'], 'settings', 'rust-analyzer', 'cargo', 'sysrootSrc')
+  end
+
+  return nil
 end
 
 local function default_sysroot_src()
-  local sysroot = vim.tbl_get(vim.lsp.config['rust_analyzer'], 'settings', 'rust-analyzer', 'cargo', 'sysroot')
+  -- какойто мудак сломал этот код для neovim > 11 версии, vim.lsp.config будет пустой пока не будет вызван vim.lsp.config('rust_analyzer') явно
+  local config = vim.lsp.config['rust_analyzer']
+  local sysroot = nil
+
+  if config then
+    sysroot = vim.tbl_get(vim.lsp.config['rust_analyzer'], 'settings', 'rust-analyzer', 'cargo', 'sysroot')
+  end
+
   if not sysroot then
     local result = vim
       .system({ 'cargo', '-Z', 'unstable-options', 'rustc', '--print', 'sysroot' }, { text = true })

@@ -3,9 +3,9 @@ end
 
 -- disable semanticTokens
 local on_init = function(client, _)
-  -- if client:supports_method('textDocument/semanticTokens') then
-  --   client.server_capabilities.semanticTokensProvider = nil
-  -- end
+  if client:supports_method('textDocument/semanticTokens') then
+    client.server_capabilities.semanticTokensProvider = nil
+  end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -35,7 +35,6 @@ vim.lsp.config('*', {
   capabilities = capabilities,
 });
 
-
 require('lze').load({
   {
     -- lazydev makes your lsp way better in your config without needing extra lsp configuration.
@@ -59,7 +58,8 @@ vim.lsp.enable('vue_ls')
 vim.lsp.enable('vtsls')
 -- vim.lsp.enable('ts_ls')
 vim.lsp.enable('eslint')
+-- rustaceanvim сам подключит lsp
+-- vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('clangd')
-vim.lsp.enable('rust-analyzer')
 vim.lsp.enable('sqls')
 vim.lsp.enable('tailwindcss')

@@ -237,6 +237,7 @@
             #     yaml
             #     json
             #     vue
+            #     toml
             #   ]
             # ))
           ];

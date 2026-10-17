@@ -3,9 +3,9 @@ end
 
 -- disable semanticTokens
 local on_init = function(client, _)
-  if client.supports_method "textDocument/semanticTokens" then
-    client.server_capabilities.semanticTokensProvider = nil
-  end
+  -- if client:supports_method('textDocument/semanticTokens') then
+  --   client.server_capabilities.semanticTokensProvider = nil
+  -- end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -60,5 +60,6 @@ vim.lsp.enable('vtsls')
 -- vim.lsp.enable('ts_ls')
 vim.lsp.enable('eslint')
 vim.lsp.enable('clangd')
+vim.lsp.enable('rust-analyzer')
 vim.lsp.enable('sqls')
 vim.lsp.enable('tailwindcss')

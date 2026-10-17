@@ -161,6 +161,7 @@
             noice-nvim
             nui-nvim
             codecompanion-nvim
+            rustaceanvim
           ];
           extra = [
             oil-nvim
